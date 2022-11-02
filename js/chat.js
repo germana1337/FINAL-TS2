@@ -1,5 +1,3 @@
-
-
 function showchatbox(){
     document.getElementById("chatbox").style.display = "block";
   }
@@ -7,5 +5,3 @@ function showchatbox(){
   function hidechatbox(){
     document.getElementById("chatbox").style.display = "none";
   }
-
-  

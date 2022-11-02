@@ -9,6 +9,7 @@
 .bodyindex{
     background: #c6c0ba;
     padding: 0;
+    font-family: 'Mark Pro',Arial,sans-serif;
 }
 
 .body-about{
@@ -18,35 +19,54 @@
 /* /////////////////////////////HEADER-NAVBAR//////////////////////
 /* /////////////////////////////HEADER-LOGO-NAVBAR///////////////// */
 
+.hamburger{
+    display: none;
+right: 1%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 0.3s;
+    background-color: #fff;
+}
+
+
+
+
 .navbar{
     background-color: #1e1c1c;
-    border-bottom: 2px solid rgba(51,51,51,.25);
     font-family: "FF Mark W05",Arial,sans-serif;
     font-size: 14px;
     font-weight: bold;
     height: 80px;
     line-height: normal;
     position: absolute;
-    text-align: left;
+    text-align: right;
     display: flex;
     width: 100%;
-    z-index: 7000000;
     left: 0; 
     padding: 26px;
 }
 
 .navbar a{
+    
    color: #c6c0ba;
+position: relative;
+
+
 }
 .container{
     position: relative;
     position: fixed;
     z-index: 2000;
+    width: 100%;
     top: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    border: 0;
     z-index: 200000;
     box-sizing: border-box;
 }
@@ -61,20 +81,42 @@
 }
 
 
-.lost{
+.lost-main{
+    border-top: 1px solid #FF416C;
+    border-bottom: 1px solid #1e1c1c;
+    color: #1e1c1c;
+    left: 130px;
+    transition: 0.4s;
+    font-size: 36px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 50px;
+    font-family: 'Mark Pro',Arial,sans-serif;
+    width: 100%;
+    left: 5%;
+}
+.lost-main:hover{
+    background-color: #1e1c1c;
+    color: #ae3232;
+    transition: 1s;
+    cursor: pointer;
+}
+.lost-icon
+{
     color: #f9f9f9;
     left: 130px;
     transition: 0.4s;
     font-size: 36px;
     cursor: pointer;
     position: absolute;
-    font-family: 'Mark Pro',Arial,sans-serif;;
-    
-    
+    font-family: 'Mark Pro',Arial,sans-serif;
+}
 
+.lost{
+    display: none;
 }
 .lost:hover{
-    color: #c7541f;
+    color: #9c2b2b;
 }
 .menu-icon{
     width: 25px;
@@ -133,23 +175,40 @@ color: rgb(249, 249, 246);
     padding: 40px;
     margin: 100px 0;
     font-weight: 600;
+    
 }
 .col h2{
     text-transform: uppercase;
+    color: #fff;
 }
 .row h1{
-    margin-bottom: 40px;
+    color: #9c2b2b;
+    top: 110px;
+
     text-transform: uppercase;
 }
+.h2tag{
+    margin-bottom: 300px;
+    width: 100%;
+    height: 40px;
+    background-color: #000;
+    position: relative;
+
+}
+
 .row .col-1{
     flex-basis: 40%;
     margin-top: 140px;
     flex: 2;
 }
 .content-three{
-    color: #070707;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    color: #656462;
+    line-height: 1.2;
+    letter-spacing: -.03em;
+
+    font-weight: 600;
+
 }
 .lost-in-tbilisi{
     margin-top: 100px;
@@ -206,8 +265,9 @@ padding: 20px;
     flex-basis: 50%;
 }
 .col-2 .valorant{
-width: 90%;
+width: 100%;
 }
+
 /* ///////////////// *//* ///////////////// *//* 
 ///////////////// *//* ///////////////// */
 
@@ -220,49 +280,38 @@ width: 90%;
     height: 68%;
     width: 84%;
     z-index: -1;
-    transform: translateX(14px);
+    transform: translateX(110px);
 }
 
 
-@media only screen and (max-width: 820px) {
-    .color-bk{
-        display: none;
-    }
+
+
+
+
+
+/* ///////////////// *//* ///////////////// */
+
+
+
+/* ///////////////// *//* ///////////////// */
+
+.imagedivi img{
+   width: 100%;
+   border-radius:  1%;
+   left: 0;
+  cursor: pointer;
+  border-radius: 13px;
+  border-top: 2px solid #9c2b2b;
+  border-bottom: 2px solid #000;
+
+}
+
+.imagedivi img:hover{
+    transform: scale(1.02);
    
 }
-    @media only screen and (max-width: 809px) {
-        .color-bk{
-            display: none;
-        }
-}
 
 
-
-
-
-
-/* ///////////////// *//* ///////////////// */
-
-
-
-/* ///////////////// *//* ///////////////// */
-
-.videodivi{
-    margin-top: 50px;
-}
-
-@media only screen and (max-width: 800px) {
-    .iframe{
-        width: 220%
-    }
-    .responsive-image{
-        display: block;
-        width: 50%;
-        position: absolute;
-        right: 0;
-       
-    }
-}
 
 
 .responsive-image{
@@ -313,70 +362,11 @@ width: 90%;
 /* ///////////////// MEDIA--MEDIA--1-NAVIGATION--MEDIA-MEDIA--*/
 
 
-@media only screen and (max-width: 820px) {
-    .walpapers{
-       width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .menu-icon{
-        display: block;
-    }
-    nav ul li {
-        display: none;
-    }
-    .video .ldr{
-        width: 100%;
-    }
-    .container .navbar h1{
-        margin-left: 128px;
-       }
-       .col-1 .win{
-        display: none;
-     }
-     .col-1 .mac{
-        display: none;
-    }
-    
-}
 
-/* ///////////////// MEDIA--MEDIA--1-NAVIGATION--MEDIA-MEDIA--*/
-/* ///////////////// MEDIA--MEDIA--1-NAVIGATION--MEDIA-MEDIA--*/
-
-
-/* ///////////////////????//////////// */
-/* ///////////////////????//////////// */
-@media only screen and (max-width: 1200px) {
-    .ftcontainer{
-        width: 100%;
-        height: 40vh;
-    }
-    
-}
-@media only screen and (max-width: 820px) {
-    .ftcontainer{
-        width: 100%;
-        height: 20vh;
-    }
-    .imgdiv{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-         width: 25%;
-    }
-}
-@media only screen and (max-width: 414px){
-    .ftcontainer{
-        width: 100%;
-        height: 14vh;
-    }
-    .row .col-1{
-        margin-top: 10px;
-    }
 
    /* ///////////////////????//////////// */
 /* ///////////////////????//////////// */
-}
+
 
 .containerbar{
     width: 1200px;
@@ -477,19 +467,7 @@ width: 100%
 /* ///////////////////????//////////// */
 /* ///////////////////????//////////// */
 
-@media only screen and (max-width: 1200px){
-    .containerbar {
-        width: 100%;
-    }
-    
-    .imgdiv{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 50%;
-    }
 
-}
 
 
     /* ////////////////?FOOTER-START-HERE////////////////////// */
@@ -640,29 +618,16 @@ width: 100%
 /* ////////////////FOOTER-NAV-RESPONSIVE-MEDIA////////////////////// */
 /* ////////////////FOOTER-NAV-RESPONSIVE-MEDIA////////////////////// */
 
-@media only screen and (max-width: 1200px){
-    .lastlogo .pegi,.pegi1,.pegi2,.pegi3{
-        display: none;
-    }
-}
-@media only screen and (max-width: 1200px){
-   .chamonatvali ul{
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-   }  
-}
 
-@media only screen and (max-width: 1500px){
-  
-}
 /* ////////////////FOOTER-NAV-RESPONSIVE-MEDIA////////////////////// */
 /* ////////////////FOOTER-NAV-RESPONSIVE-MEDIA////////////////////// */
 
 
-.chamonatvali .footnav1:hover{
-    cursor: pointer;
-    background-color: #c71f70;
+.chamonatvali .footnav a:hover{
+cursor: pointer;
+color: #E4405F;
+
+
 }
 
 .lastlogo{
@@ -681,6 +646,9 @@ width: 100%
     right: 0;
     bottom: 0;
 }
+.main-pages-photo{
+    width: 120%;
+}
 
     /* ////////////////-FOOTER-END-HERE////////////////////// */
 /* ////////////////FOOTER-END-HERE////////////////////// */
@@ -693,7 +661,7 @@ width: 100%
     background-color: #d19592;
 }
 .wrapper{
-   display: grid;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 5px;
     padding: 10px;
@@ -717,38 +685,10 @@ img{
     transition: 0.4s;
     transform: scale(1.02)
 }
-.wrapper h3{
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-}
 
-/* ////////////////RESPONSIVE-IMG-GALLERY////////////////////// */
-/* ////////////////RESPONSIVE-IMG-GALLERY////////////////////// */
-@media only screen and (max-width: 700px) {
-    .wrapper img{
-        width: 80%;
-    }
- 
-    .imggallery{
-     padding: 10px;
-    }
-  }
-  @media only screen and (max-width: 520px) {
-    .wrapper img{
-        width: 100%;
-    }
-  }
-  @media only screen and (max-width: 400px) {
-    .wrapper img{
-        width: 80%;
-    }
-  }
-  @media only screen and (max-width: 250px) {
-    .wrapper img{
-        width: 100%;
-    }
-  }
+
+
+  
 /* ////////////////??????////////////////////// */
 /* ////////////////////////////////////// */
 
@@ -804,6 +744,11 @@ img{
     color: #fff;
     
 }
+.new-added-gameplays:hover{
+    color: #CD201F;
+    transition: 1s;
+    cursor: pointer;
+}
 .imggallery img{
     width: 60%;
     justify-items: center;
@@ -826,38 +771,34 @@ img{
     font-size: 30px;
 }
 
-.readmore{
-    width: 100%;
-    padding: 30px;
-
-}
 .readmore p:hover{
-background-color: rgb(13, 13, 13);
-cursor: pointer;
-transition: 1s;
-}
-.readmore .readmore-p{
-    text-align: center;
-    justify-content: center;
-    color: rgb(243, 234, 234);
-    text-transform: uppercase;
+    background-color: rgb(13, 13, 13);
+    cursor: pointer;
+    transition: 1s;
+    }
+    .readmore .readmore-p{
+        text-align: center;
+        justify-content: center;
+        color: rgb(243, 234, 234);
+        text-transform: uppercase;
+        
+        
+    }
     
+    .readmore p{
+        width:  34%;
+        margin:  0 auto;
+        border: 1px solid rgb(24, 24, 24);
+        padding: 10px;
+        background-color: rgb(77, 67, 67);
+        color: rgb(255, 255, 255);
+        box-sizing: border-box;
+        font-family: 'Mark Pro',Arial,sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #656462;
+    }
     
-}
-
-.readmore p{
-    width:  34%;
-    margin:  0 auto;
-    border: 1px solid rgb(24, 24, 24);
-    padding: 10px;
-    background-color: rgb(77, 67, 67);
-    color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    font-family: 'Mark Pro',Arial,sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: #656462;
-}
 
 .contact-body{
     background-color: #c6c0ba;
@@ -866,6 +807,7 @@ transition: 1s;
 /* ////////////////NEWS-SIAXLEEBI////////////////////// */
 
 .owl-carousel{
+    cursor: pointer;
 margin-top: 150px;
 width: 100%;
 margin-top: 100px;
@@ -900,34 +842,38 @@ margin-top: 100px;
         bottom: 18px;
         background-color: rgb(220, 210, 210);
     }
-    @media only screen and (max-width: 420px) {
+
+
+        
+           .maincontbar .containerbar img{
+         margin-left:50%;
+            width: 50%;
+            height: 50%;
+        }
+
         .new-parent{
         display: flex;
         left: 14%;
         top: 10px;
- 
+        }
+        .readmore .shida-gverdi-p{
+            width: 100%;
         }
        
-        .row .valorant{
+       
+         .row .valorant{
             position: absolute;
-            top: 0;
-            left: 20px;
-            width: 150%;
+          margin-top: 50px;
+            left: 21%;
+            width: 100%;
             display: block;
         }
     
-      }
+      
 
       
-      @media only screen and (max-width: 820px) {
-      
-        .row .valorant{
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 160%;
-        }
-    }
+
+    
 
     .gallery-image{
         margin-top: 100px;   
@@ -998,44 +944,7 @@ margin-top: 100px;
     .content-section .social i:hover{
         color:#3d3d3d;
     }
-    @media screen and (max-width: 768px){
-        .container{
-        width: 100%;
-        display: block;
-        margin:auto;
-    }
-    .content-section{
-        float:none;
-        width:100%;
-        display: block;
-        margin:auto;
-    }
-    .image-section{
-        float:none;
-        width:100%;
-        
-    }
-    .image-section img{
-        width: 100%;
-        height: auto;
-        display: block;
-        margin:auto;
-    }
-    .content-section .title{
-        text-align: center;
-        font-size: 19px;
-    }
-    .content-section .content-project .button{
-        text-align: center;
-    }
-    .content-section .content-project .button a{
-        padding:9px 30px;
-    }
-    .content-section .social{
-        text-align: center;
-    }
     
-    }
 
 /* 
     //////////////////////// */
@@ -1138,19 +1047,7 @@ button {
     
    
 }
-@media only screen and (max-width: 520px) {
-    button {
-      width: 100%;
-     margin-left: 50%;
-     top: 20px;
-    }
-  }
 
-  @media only screen and (max-width: 742px) {
-    button {
-width: 100%;
-    }
-  }
 
 button:hover{
     cursor: pointer;
@@ -1342,14 +1239,7 @@ input {
 }
 
 
-@media only screen and (max-width: 920px) {
-    .swiper-shua {
-      display: none;
-    }
-    .readmore{
-        display: none;
-    }
-  }
+
 /* chatchatchat */
 
 .chatbutton{
@@ -1366,6 +1256,12 @@ input {
     z-index: 1;
     cursor: pointer;
 }
+
+.chatbutton:hover{
+    background-color: #9c2b2b;
+    transform:scale(1.02);
+}
+
 .chatboxheader p{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #fff;
@@ -1475,6 +1371,7 @@ padding: 25px;
 
 /* //////////TOURNAMENTS BOOTTSTRAP///////////////// */
 
+
 .zomaheader{
     width: 100%;
     cursor: pointer;
@@ -1505,7 +1402,7 @@ padding: 25px;
 .gamyopi-content .col-sm-12{
     width: 100%;
     background-color: #000000;
-    border: 1 solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
 }
 .gamyopi-content .col-sm-12 p{
    text-align: center;
@@ -1537,10 +1434,53 @@ padding: 25px;
 
 
 
-
-@media only screen and (max-width: 820px) {
-    .tournaments-map{
-        width: 90%;
-
-    }
+/* last-elements-for-next-page*/
+  .shemdegi-gverdi{
+  width: 100%;
   }
+  .shemdegi-gverdi .next-page{
+    display: flex;
+    background-color: #1e1c1c;
+    justify-content: center;
+    font-size: 22px;
+    padding: 20px;
+    border-radius: 2%;
+    color: #a29797;
+    margin-top: 140px;
+  }
+
+.shemdegi-gverdi .next-page:hover{
+    display: flex;
+    background-color: #201d1d;
+    font-size: 23px;
+    padding: 21px;
+    border-radius: 2%;
+    color: #e9d2d2;
+    cursor: pointer;
+  }
+  .shemdegi-gverdi ul{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .shemdegi-gverdi ul li{
+    font-size: 16px;
+    padding: 10px;
+  }
+  .shemdegi-gverdi ul li a{
+    font-size: 22px;
+  }
+  .all-news{
+  margin-top: 100px;
+  text-transform: uppercase;
+  font-size: 12px;
+  }
+.all-news:hover{
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #d74343;
+    transition: 1s;
+    cursor: pointer;
+      }

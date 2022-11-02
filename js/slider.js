@@ -1,3 +1,5 @@
+
+
 $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
@@ -27,6 +29,3 @@ var light = document.getElementById('light');
 light.addEventListener('click',function(light){
 light.target.classList.toggle('lon');
 })
-
-
-
